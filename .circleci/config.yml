@@ -20,7 +20,7 @@ jobs:
           name: Build 
           command: flutter build macos
       - store_artifacts:
-          path: ozzie
+          path: build/macos/Build/Products/Release
 workflows:
   test_and_distribute:
     jobs:
