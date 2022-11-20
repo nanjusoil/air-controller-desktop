@@ -19,8 +19,9 @@ jobs:
       - run:
           name: Build 
           command: flutter build macos
+      - run: zip -r directory.zip build/macos/Build/Products/Release
       - store_artifacts:
-          path: build/macos/Build/Products/Release
+          path: directory.zip
 workflows:
   test_and_distribute:
     jobs:
